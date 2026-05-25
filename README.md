@@ -13,13 +13,13 @@ Built with **Python (Flask)** on the backend and **React.js** on the frontend.
 <img width="1357" height="605" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/7e0286f4-34f6-4888-8181-7cf0f3efb348" />
 
 ### Departments — Budget Management
-<img width="1361" height="603" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/d87662ea-44f7-4ef3-90fa-5d58432a15c4" />
+<img width="1359" height="593" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/54e7b3e1-bf2c-4d46-85f1-254e2fda9a9b" />
 
 ### Transactions — Expense Tracking
 <img width="1361" height="587" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/d1e9645d-e1f5-4292-9796-39aa9580db1f" />
 
 ### Monthly Reports — Actuals vs Forecast
-<img width="1359" height="593" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/54e7b3e1-bf2c-4d46-85f1-254e2fda9a9b" />
+<img width="1361" height="603" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/d87662ea-44f7-4ef3-90fa-5d58432a15c4" />
 
 
 ---
