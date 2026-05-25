@@ -1,5 +1,179 @@
 # Fintrack
-A full-stack budget monitoring system built with Flask and React — tracks departmental spending, compares actuals vs forecasts, and flags overspends automatically
+# 💰 FinTrack — Departmental Budget Monitoring System
 
+A full-stack web application that helps organisations track departmental budgets, compare actual spending against forecasts, and automatically flag overspends before they become a problem.
 
-Built this to understand how finance teams actually track budgets across departments. You can add departments, log expenses and forecast entries, see monthly variance on a line chart, and get automatic alerts when a department crosses 60% or 80% of its annual budget. Also supports bulk CSV import for loading historical data. Backend is a Flask REST API, frontend is React with Recharts for the charts.
+Built with **Python (Flask)** on the backend and **React.js** on the frontend.
+
+---
+
+## Screenshots
+
+### Dashboard — Budget Overview
+<img width="1357" height="605" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/7e0286f4-34f6-4888-8181-7cf0f3efb348" />
+
+### Departments — Budget Management
+![Departments page showing list of departments with annual budgets and delete options](screenshots/departments.png)
+
+### Transactions — Expense Tracking
+![Transactions page with add entry form, filter controls and transaction list](screenshots/transactions.png)
+
+### Monthly Reports — Actuals vs Forecast
+![Monthly reports page with line chart comparing actuals vs forecast over time](screenshots/reports.png)
+
+---
+
+## What it does
+
+Every department in a company gets a yearly budget. Someone has to track every expense, compare it against what was planned, and raise a flag when things go off course. FinTrack handles all of that in one place.
+
+- **Dashboard** — see all departments at a glance with total budget, actuals spent, forecast, and a side-by-side bar chart so you can spot outliers immediately
+- **Departments** — add or remove departments and set their annual budget cap
+- **Transactions** — log individual expenses or forecast entries by department and month, with filters to drill into specific departments or time periods
+- **Monthly Reports** — a line chart showing actuals vs forecast month by month, with a variance breakdown table below
+- **Alerts** — automatically flags any department that has crossed 60% or 80% of its annual budget
+- **CSV Import** — bulk-upload transactions from a spreadsheet for loading historical data quickly
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Backend | Python 3, Flask, Flask-CORS |
+| Frontend | React.js 18, Recharts, PapaParse |
+| Storage | JSON file (no database setup needed) |
+| Charts | Recharts (bar chart, line chart) |
+| CSV parsing | PapaParse |
+
+---
+
+## Project structure
+
+```
+fintrack/
+├── backend/
+│   ├── app.py              # Flask REST API — all routes and business logic
+│   ├── requirements.txt    # Python dependencies
+│   └── data.json           # Auto-generated on first run with demo data
+└── frontend/
+    ├── package.json
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── App.js          # All React components and page logic
+        ├── index.js        # React entry point
+        └── index.css       # Global styles
+```
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Node.js 16 or higher
+- npm
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/fintrack.git
+cd fintrack
+```
+
+### 2. Start the backend
+
+Open a terminal and run:
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+
+The Flask server starts at `http://localhost:5000`. On first run it creates `data.json` automatically, pre-loaded with demo data across five departments so you can see the dashboard working immediately.
+
+### 3. Start the frontend
+
+Open a **second terminal** and run:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+This opens `http://localhost:3000` in your browser automatically. Both terminals need to stay open while using the app.
+
+---
+
+## API reference
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/departments` | List all departments |
+| POST | `/api/departments` | Add a department |
+| DELETE | `/api/departments/:id` | Remove a department and its transactions |
+| GET | `/api/transactions` | List transactions (filter by dept\_id, month) |
+| POST | `/api/transactions` | Add a transaction |
+| DELETE | `/api/transactions/:id` | Remove a transaction |
+| GET | `/api/report/summary` | Per-department budget summary with variance and alert status |
+| GET | `/api/report/monthly` | Month-by-month actuals vs forecast breakdown |
+| GET | `/api/alerts` | Departments that have crossed the 60% or 80% utilisation threshold |
+
+---
+
+## CSV import format
+
+To bulk-import transactions, upload a `.csv` file with these columns:
+
+```
+department,description,amount,month,type
+Engineering,AWS Servers,45000,2024-03,actual
+Marketing,Ad Campaign Q2,25000,2024-03,actual
+Operations,Office Rent,18000,2024-03,forecast
+```
+
+The `department` value must match an existing department name (case-insensitive). The `type` field accepts `actual` or `forecast`.
+
+---
+
+## How the alert system works
+
+The backend calculates utilisation as `(total actuals / annual budget) × 100` for each department on every summary request.
+
+- Above **60%** → warning alert
+- Above **80%** → critical alert
+
+The Alerts page shows a real-time list of departments that have crossed either threshold, with a visual progress bar showing how much of the budget has been consumed.
+
+---
+
+## Things I'd add with more time
+
+- User authentication so different department heads can only see their own data
+- Export to PDF or Excel for period-end reporting
+- PostgreSQL backend for larger datasets
+- Email or Slack notifications when an alert triggers
+- Year-over-year comparison view
+
+---
+
+## Local development notes
+
+- The frontend runs on port 3000 and proxies all `/api/...` requests to port 5000 (configured in `package.json`)
+- All data is stored in `backend/data.json` — you can delete this file to reset to a clean state, it will be recreated with demo data on the next server start
+- No environment variables or `.env` files needed to run locally
+
+---
+
+## Author
+
+**Harshal Daf**
+[linkedin.com/in/harshal-daf](https://linkedin.com/in/harshal-daf) · harshaldaf627@gmail.com
+
+---
+
+*Feel free to fork and adapt for your own use.*
