@@ -1,0 +1,183 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Engineering",
+      "annual_budget": 500000
+    },
+    {
+      "id": 2,
+      "name": "Marketing",
+      "annual_budget": 200000
+    },
+    {
+      "id": 3,
+      "name": "Operations",
+      "annual_budget": 150000
+    },
+    {
+      "id": 4,
+      "name": "HR",
+      "annual_budget": 100000
+    },
+    {
+      "id": 5,
+      "name": "Finance",
+      "annual_budget": 80000
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "dept_id": 1,
+      "description": "AWS Cloud Infrastructure",
+      "amount": 45000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 2,
+      "dept_id": 1,
+      "description": "Developer Salaries Q1",
+      "amount": 90000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 3,
+      "dept_id": 1,
+      "description": "Software Licenses",
+      "amount": 12000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 4,
+      "dept_id": 1,
+      "description": "DevOps Tools",
+      "amount": 8000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 5,
+      "dept_id": 2,
+      "description": "Ad Campaign - Q1",
+      "amount": 30000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 6,
+      "dept_id": 2,
+      "description": "Event Sponsorship",
+      "amount": 15000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 7,
+      "dept_id": 2,
+      "description": "Content Creation Tools",
+      "amount": 5000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 8,
+      "dept_id": 3,
+      "description": "Office Rent - Jan",
+      "amount": 18000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 9,
+      "dept_id": 3,
+      "description": "Office Rent - Feb",
+      "amount": 18000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 10,
+      "dept_id": 3,
+      "description": "Utilities",
+      "amount": 4000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 11,
+      "dept_id": 4,
+      "description": "Recruitment Drive",
+      "amount": 20000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 12,
+      "dept_id": 4,
+      "description": "Training Programs",
+      "amount": 8000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 13,
+      "dept_id": 5,
+      "description": "Audit Fees",
+      "amount": 12000,
+      "month": "2024-01",
+      "type": "actual"
+    },
+    {
+      "id": 14,
+      "dept_id": 5,
+      "description": "Accounting Software",
+      "amount": 3000,
+      "month": "2024-02",
+      "type": "actual"
+    },
+    {
+      "id": 15,
+      "dept_id": 1,
+      "description": "Q1 Budget Plan - Engineering",
+      "amount": 170000,
+      "month": "2024-01",
+      "type": "forecast"
+    },
+    {
+      "id": 16,
+      "dept_id": 2,
+      "description": "Q1 Budget Plan - Marketing",
+      "amount": 55000,
+      "month": "2024-01",
+      "type": "forecast"
+    },
+    {
+      "id": 17,
+      "dept_id": 3,
+      "description": "Q1 Budget Plan - Operations",
+      "amount": 42000,
+      "month": "2024-01",
+      "type": "forecast"
+    },
+    {
+      "id": 18,
+      "dept_id": 4,
+      "description": "Q1 Budget Plan - HR",
+      "amount": 30000,
+      "month": "2024-01",
+      "type": "forecast"
+    },
+    {
+      "id": 19,
+      "dept_id": 5,
+      "description": "Q1 Budget Plan - Finance",
+      "amount": 16000,
+      "month": "2024-01",
+      "type": "forecast"
+    }
+  ]
+}
