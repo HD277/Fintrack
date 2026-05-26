@@ -10,8 +10,9 @@
     "papaparse": "^5.4.1"
   },
   "scripts": {
+    "postinstall": "chmod +x ./node_modules/.bin/react-scripts || true",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "node ./node_modules/react-scripts/bin/react-scripts.js build"
   },
   "proxy": "http://localhost:5000",
   "browserslist": {
