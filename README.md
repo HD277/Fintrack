@@ -1,5 +1,5 @@
 # Fintrack
-# 💰 FinTrack — Departmental Budget Monitoring System
+# FinTrack — Departmental Budget Monitoring System
 
 A full-stack web application that helps organisations track departmental budgets, compare actual spending against forecasts, and automatically flag overspends before they become a problem.
 
